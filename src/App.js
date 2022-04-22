@@ -13,7 +13,6 @@ const App = ()=>{
             <div style={imgStyle}>this is an svg<img src={images.cogLogo} alt="" /></div>
             <div >this is a jpg<img style={imgStyle} src={images.livingRoom}/>
             </div>
-            <div className='cssStyled'>this is a div styled with CSS</div>
         </div>
     )
 }
