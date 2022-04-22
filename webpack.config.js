@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack');
 
 module.exports = {
+    entry: './src/index.js',
     mode: 'development',
     module: {
     rules: [
@@ -14,6 +16,17 @@ module.exports = {
             plugins: ['@babel/plugin-transform-runtime'],
           },
         },
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
